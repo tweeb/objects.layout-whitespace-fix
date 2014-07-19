@@ -1,4 +1,3 @@
-objects.layout-whitespace-fix
-=============================
+# Layout whitespace fix
 
-An extension of inuitcss layout to remove whitespace.
+An extension of [inuitcss' `layout`](https://github.com/inuitcss/objects.layout) to remove whitespace.

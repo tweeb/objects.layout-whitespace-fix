@@ -1,0 +1,25 @@
+/*------------------------------------*\
+	#LAYOUT-WHITESPACE-FIX
+\*------------------------------------*/
+
+/**
+ * The inuitcss layout system uses `display: inline-block;` means that
+ * the layout items need their whitespace removing in order for them
+ * to work correctly.
+ *
+ *
+ * Use this files only if you can't remove whitespace directly in your HTML.
+ *
+ *
+ */
+
+.#{$inuit-namespace}layout,
+%#{$inuit-namespace}layout {
+	font-size: 0;
+}
+
+    .#{$inuit-namespace}layout__item,
+    %#{$inuit-namespace}layout__item {
+    	font-size: $inuit-base-font-size;
+        font-size: 1rem;
+    }
