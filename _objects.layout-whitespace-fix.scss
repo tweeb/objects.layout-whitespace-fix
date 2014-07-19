@@ -7,19 +7,19 @@
  * the layout items need their whitespace removing in order for them
  * to work correctly.
  *
+ * This extension is based on the font size zero method.
+ * Use it only if you can't remove whitespace directly in your HTML.
  *
- * Use this files only if you can't remove whitespace directly in your HTML.
- *
- *
+ * 1. Remove whitespace between child element.
+ * 2. Restore font-size to `$inuit-base-font-size` using `font-size` mixin.
  */
 
 .#{$inuit-namespace}layout,
 %#{$inuit-namespace}layout {
-	font-size: 0;
+	font-size: 0; /* [1] */
 }
 
     .#{$inuit-namespace}layout__item,
     %#{$inuit-namespace}layout__item {
-    	font-size: $inuit-base-font-size;
-        font-size: 1rem;
+    	@include inuit-font-size($inuit-base-font-size); /* [2] */
     }
