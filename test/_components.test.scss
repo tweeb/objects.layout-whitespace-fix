@@ -1,0 +1,14 @@
+/*------------------------------------*\
+	#TEST
+\*------------------------------------*/
+
+.test {
+	padding: $inuit-base-spacing-unit;
+}
+
+
+	.test__title,
+	.greybox {
+		background-color: rgba(#000, .2);
+		color: #fff;
+	}

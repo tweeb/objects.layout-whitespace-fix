@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Layout whitespace fix</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="test/test.css">
+</head>
+<body>
+
+	<div class="test">
+		<h1 class="test__title">Test title</h1>
+		<div class="test__body">
+
+			<div class="layout layout--flush">
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 1</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 2</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 3</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 4</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="test">
+		<h1 class="test__title">Test title</h1>
+		<div class="test__body">
+
+			<div class="layout">
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 1</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 2</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 3</div>
+				</div>
+				<div class="layout__item  1/4">
+					<div class="greybox">Item 4</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>
