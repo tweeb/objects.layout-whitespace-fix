@@ -13,13 +13,12 @@
  * 1. Remove whitespace between child element.
  * 2. Restore font-size to `$inuit-base-font-size` using `font-size` mixin.
  */
-
-.#{$inuit-namespace}layout,
-%#{$inuit-namespace}layout {
+.#{$inuit-layout-namespace}layout,
+%#{$inuit-layout-namespace}layout {
 	font-size: 0; /* [1] */
 }
 
-    .#{$inuit-namespace}layout__item,
-    %#{$inuit-namespace}layout__item {
+    .#{$inuit-layout-namespace}layout__item,
+    %#{$inuit-layout-namespace}layout__item {
     	@include inuit-font-size($inuit-base-font-size); /* [2] */
     }
