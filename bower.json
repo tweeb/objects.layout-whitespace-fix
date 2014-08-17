@@ -1,0 +1,23 @@
+{
+  "name": "inuit-layout-whitespace-fix",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tweeb/objects.layout-whitespace-fix",
+  "authors": [
+    "Florian Bouvot <florian.bouvot@gmail.com>"
+  ],
+  "description": "An extension to inuit-layout to remove whitespace.",
+  "main": "_objects.layout-whitespace-fix.scss",
+  "keywords": [
+    "inuitcss",
+    "oocss",
+    "css",
+    "inline-block",
+    "whitespace"
+  ],
+  "license": "CC0",
+  "dependencies": {
+    "inuit-defaults": "~0.2.1",
+    "inuit-mixins": "~0.2.3",
+    "inuit-layout": "~0.3.2"
+  }
+}
