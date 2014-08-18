@@ -2,6 +2,8 @@
 	#LAYOUT-WHITESPACE-FIX
 \*------------------------------------*/
 
+$inuit-enable-layout-punctual-fix:	false !default;
+
 /**
  * The inuitcss layout system uses `display: inline-block;` means that
  * the layout items need their whitespace removing in order for them
@@ -22,3 +24,28 @@
     %#{$inuit-layout-namespace}layout__item {
     	@include inuit-font-size($inuit-base-font-size); /* [2] */
     }
+
+
+
+
+
+
+@if ($inuit-enable-layout-punctual-fix == true) {
+
+
+	/**
+	 * Remove whitespace punctually
+	 */
+
+	.#{$inuit-layout-namespace}layout--fix,
+	%#{$inuit-layout-namespace}layout--fix {
+		font-size: 0; /* [1] */
+
+	    > .#{$inuit-layout-namespace}layout__item,
+	    > %#{$inuit-layout-namespace}layout__item {
+	    	@include inuit-font-size($inuit-base-font-size); /* [2] */
+	    }
+
+	}
+
+}
