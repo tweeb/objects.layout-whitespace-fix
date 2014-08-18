@@ -33,13 +33,7 @@ $inuit-enable-layout-punctual-fix:	false !default;
 	    }
 
 }
-
-
-
-
-
-@if ($inuit-enable-layout-punctual-fix == true) {
-
+@else {
 
 	/**
 	 * Remove whitespace punctually
