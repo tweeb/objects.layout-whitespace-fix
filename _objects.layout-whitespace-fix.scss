@@ -20,16 +20,19 @@ $inuit-enable-layout-punctual-fix:	false !default;
  * 1. Remove whitespace between child element.
  * 2. Restore font-size to `$inuit-base-font-size` using `font-size` mixin.
  */
-.#{$inuit-layout-namespace}layout,
-%#{$inuit-layout-namespace}layout {
-	font-size: 0; /* [1] */
+@if ($inuit-enable-layout-punctual-fix == false) {
+
+	.#{$inuit-layout-namespace}layout,
+	%#{$inuit-layout-namespace}layout {
+		font-size: 0; /* [1] */
+	}
+
+	    .#{$inuit-layout-namespace}layout__item,
+	    %#{$inuit-layout-namespace}layout__item {
+	    	@include inuit-font-size($inuit-base-font-size); /* [2] */
+	    }
+
 }
-
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
-    	@include inuit-font-size($inuit-base-font-size); /* [2] */
-    }
-
 
 
 
