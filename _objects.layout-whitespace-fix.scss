@@ -2,7 +2,12 @@
 	#LAYOUT-WHITESPACE-FIX
 \*------------------------------------*/
 
+// Predefine the variables below in order to alter and enable specific features.
 $inuit-enable-layout-punctual-fix:	false !default;
+
+
+
+
 
 /**
  * The inuitcss layout system uses `display: inline-block;` means that
