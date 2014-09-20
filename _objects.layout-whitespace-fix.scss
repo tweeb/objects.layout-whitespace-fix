@@ -1,6 +1,13 @@
 /*------------------------------------*\
-	#LAYOUT-WHITESPACE-FIX
+    #LAYOUT-WHITESPACE-FIX
 \*------------------------------------*/
+
+// Predefine the variables below in order to alter and enable specific features.
+$inuit-enable-layout--punctual-fix:    false !default;
+
+
+
+
 
 /**
  * The inuitcss layout system uses `display: inline-block;` means that
@@ -13,12 +20,34 @@
  * 1. Remove whitespace between child element.
  * 2. Restore font-size to `$inuit-base-font-size` using `font-size` mixin.
  */
-.#{$inuit-layout-namespace}layout,
-%#{$inuit-layout-namespace}layout {
-	font-size: 0; /* [1] */
-}
+@if ($inuit-enable-layout--punctual-fix == false) {
 
-    .#{$inuit-layout-namespace}layout__item,
-    %#{$inuit-layout-namespace}layout__item {
-    	@include inuit-font-size($inuit-base-font-size); /* [2] */
+    .#{$inuit-layout-namespace}layout,
+    %#{$inuit-layout-namespace}layout {
+        font-size: 0; /* [1] */
     }
+
+        .#{$inuit-layout-namespace}layout__item,
+        %#{$inuit-layout-namespace}layout__item {
+            @include inuit-font-size($inuit-base-font-size, none); /* [2] */
+        }
+
+}
+@else {
+
+    /**
+     * Remove whitespace punctually
+     */
+
+    .#{$inuit-layout-namespace}layout--fix,
+    %#{$inuit-layout-namespace}layout--fix {
+        font-size: 0; /* [1] */
+
+        > .#{$inuit-layout-namespace}layout__item,
+        > %#{$inuit-layout-namespace}layout__item {
+            @include inuit-font-size($inuit-base-font-size, none); /* [2] */
+        }
+
+    }
+
+}
